@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "rust-lang.rust",
+        "spmeesseman.vscode-taskexplorer",
+        "vadimcn.vscode-lldb",
+    ]
+}
