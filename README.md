@@ -2,7 +2,7 @@
 
 Simple Rust kickoff
 
-Rust is a general-purpose, multi-paradigm, compiled programming language sponsored by Mozilla Research.
+Rust is a general-purpose, multi-paradigm, compiled programming language with a static, strong type system. Sponsored by Mozilla Research.
 
 ## Installing Rust on Arch-Linux
 
