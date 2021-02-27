@@ -95,10 +95,12 @@ cargo install rand
 
 ## use the dependency
 
-`use rand::Rng;`
+```rust
+use rand::Rng;
 
     const pseudo_rand = rand::thread_rng().gen_range(1..11);
     println!("Pseudo-Rand: {}", pseudo_rand);
+```
 
 ## Modules
 
@@ -160,7 +162,9 @@ let x = 6;
 
 Can be declared in any scope and **not** be computed at runtime!
 
+```rust
 const MAX_POINTS: u32 = 100_000;
+```
 
 The type of the value must be defined. 
 
@@ -184,9 +188,12 @@ four primary scalar types:
     Byte (u8 only)  b'A'
 
 ## Floats
-    let x = 2.0; // f64
 
-    let y: f32 = 3.0; // f32
+```rust
+let x = 2.0; // f64
+
+let y: f32 = 3.0; // f32
+```
 
 ## Booleans
 
@@ -194,69 +201,74 @@ let f: bool = false;
 
 ## Characters
 
-char type is four bytes in size and represents a Unicode Scalar Value
+`char` type is four bytes in size and represents a Unicode Scalar Value
 
 ## Tuples
 
+```rust
 let tup: (i32, f64, u8) = (500, 6.4, 1);
-    let tup = (500, 6.4, 1);
-
-    let (x, y, z) = tup;
+let tup = (500, 6.4, 1);
+let (x, y, z) = tup;
+```
 
 ## Arrays
 
+```rust
 let a = [1, 2, 3, 4, 5];
-
 let months = ["January", "February"];
+```
 
 ## Functions
 
-params (input)
-(x: i32)
+```rust
+// params (input)
+fn foo(x: i32)
 
-return values | results ( output)
-five() -> i32 {
+// return values | results ( output)
+fn five() -> i32 {
     5
 }
 
 fn plus_one(x: i32) -> i32 {
     x + 1
 }
-
+```
 ## Control Flow
 
-    let number = 3;
+```rust
+let number = 3;
 
-    if number < 5 {
-        println!("condition was true");
-    } else {
-        println!("condition was false");
+if number < 5 {
+    println!("condition was true");
+} else {
+    println!("condition was false");
+}
+
+let condition = true;
+let number = if condition { 5 } else { 6 };
+
+    loop {
+    println!("again!");
+}
+
+let mut counter = 0;
+
+let result = loop {
+    counter += 1;
+
+    if counter == 10 {
+        break counter * 2;
     }
+};
 
-        let condition = true;
-    let number = if condition { 5 } else { 6 };
+let mut number = 3;
 
-        loop {
-        println!("again!");
-    }
+while number != 0 {
+    println!("{}!", number);
 
-        let mut counter = 0;
-
-    let result = loop {
-        counter += 1;
-
-        if counter == 10 {
-            break counter * 2;
-        }
-    };
-
-        let mut number = 3;
-
-    while number != 0 {
-        println!("{}!", number);
-
-        number -= 1;
-    }
+    number -= 1;
+}
+```
 
 ## References
 
